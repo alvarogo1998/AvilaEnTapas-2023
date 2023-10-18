@@ -1,4 +1,4 @@
-package com.agalobr.ex03views.app
+package com.agalobr.ex04_tapasview.app
 
 sealed class ErrorApp {
     object UnKonowError : ErrorApp()

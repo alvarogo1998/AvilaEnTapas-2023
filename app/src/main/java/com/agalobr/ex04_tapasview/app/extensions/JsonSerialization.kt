@@ -1,4 +1,4 @@
-package com.agalobr.ex03views.app.extensions
+package com.agalobr.ex04_tapasview.app.extensions
 
 interface JsonSerialization {
 
