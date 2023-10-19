@@ -7,6 +7,6 @@ import com.agalobr.ex04_tapasview.R
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.item_tapas_avila)
     }
 }

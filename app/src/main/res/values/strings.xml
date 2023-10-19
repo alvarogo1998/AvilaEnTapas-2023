@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Ex04_TapasView</string>
+    <string name="text_num_position">1º</string>
+    <string name="text_name_restaurant">Vermuteria el Atrio</string>
+    <string name="text_total">Total:</string>
+    <string name="text_points">0</string>
+    <string name="text_pts">Ptos.</string>
+    <string name="text_average">Media:</string>
+    <string name="total_average">0.0</string>
+    <string name="text_description">Albóndiga de faisán con escabeche con caldo clarificado de gambon salvaje</string>
 </resources>
