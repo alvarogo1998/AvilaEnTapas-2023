@@ -10,10 +10,6 @@ class GsonSerialization : JsonSerialization {
         return gson.toJson(obj, typeClass)
     }
 
-    override fun <T> toJsonOut(obj: T, typeClass: Class<out T>): String {
-        return gson.toJson(obj, typeClass)
-    }
-
     override fun <T> fromJson(json: String, typeClass: Class<T>): T {
         return gson.fromJson(json, typeClass)
     }

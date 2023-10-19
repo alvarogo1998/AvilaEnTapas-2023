@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin_s"
     android:elevation="@dimen/card_elevation"
-    app:cardCornerRadius="@dimen/card_elevation">
+    app:cardCornerRadius="@dimen/card_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,51 +19,44 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/image_height"
             android:background="@color/black"
+            android:contentDescription="@string/image_description"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars"
-            android:contentDescription="@string/image_description"/>
+            tools:src="@tools:sample/avatars" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@id/text_num_position"
+            app:layout_constraintEnd_toEndOf="@id/ic_cup"
+            app:layout_constraintTop_toTopOf="@id/text_num_position"
+            app:layout_constraintBottom_toBottomOf="@id/text_num_position"
+            app:shapeAppearanceOverlay="@dimen/card_radius"
+            android:alpha="0.5"/>
+
+        <TextView
+            android:layout_margin="@dimen/padding"
+            android:id="@+id/text_num_position"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/margin_s"
+            android:layout_height="wrap_content"
+            android:text="@string/text_num_position"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@id/image_tapa"
+            app:layout_constraintTop_toTopOf="@id/image_tapa" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_cup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding"
-            app:cardCornerRadius="@dimen/card_elevation"
-            app:layout_constraintStart_toStartOf="@id/image_tapa"
-            app:layout_constraintTop_toTopOf="@id/image_tapa">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/position"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="horizontal"
-                android:padding="@dimen/margin_s">
-
-                <TextView
-                    android:textSize="22sp"
-                    android:id="@+id/text_num_position"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text_num_position"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_cup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_cup"
-                    app:layout_constraintStart_toEndOf="@id/text_num_position"
-                    app:layout_constraintTop_toTopOf="@id/text_num_position"
-                    app:layout_constraintBottom_toBottomOf="@id/text_num_position"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
+            android:paddingEnd="@dimen/margin_s"
+            android:src="@drawable/ic_cup"
+            app:layout_constraintBottom_toBottomOf="@id/text_num_position"
+            app:layout_constraintStart_toEndOf="@id/text_num_position"
+            app:layout_constraintTop_toTopOf="@id/text_num_position" />
 
         <TextView
             android:id="@+id/text_description"
