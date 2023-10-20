@@ -15,7 +15,7 @@ class TapasViewModel(private val getTapasUseCase: GetTapasUseCase) : ViewModel()
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
-    private fun loadTapas() {
+    fun loadTapas() {
         viewModelScope.launch(Dispatchers.IO) {
             getTapasUseCase.invoke().fold(
                 { responseError(it) },
@@ -28,13 +28,13 @@ class TapasViewModel(private val getTapasUseCase: GetTapasUseCase) : ViewModel()
         _uiState.postValue(UiState(errorApp = it))
     }
 
-    private fun responseLoadTapasSuccess(it: List<Tapas>) {
-        _uiState.postValue(UiState(tapas = it))
+    private fun responseLoadTapasSuccess(it : List<Tapas>) {
+        _uiState.postValue(UiState(listTapas = it))
     }
 
     data class UiState(
         val errorApp: ErrorApp? = null,
         val isLoading: Boolean = false,
-        val tapas: List<Tapas> = emptyList()
+        val listTapas: List<Tapas> = emptyList()
     )
 }
