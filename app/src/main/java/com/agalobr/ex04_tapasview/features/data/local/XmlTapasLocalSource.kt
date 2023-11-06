@@ -12,12 +12,14 @@ class XmlTapasLocalSource (context: Context, private val gson: JsonSerialization
 
     private val sharedPref = context.getSharedPreferences("Tapas", Context.MODE_PRIVATE)
 
+
     fun save(listTapas: List<Tapas>): Either<ErrorApp, List<Tapas>>{
         return try {
             listTapas.forEach { tapas->
-                sharedPref.edit().putString(tapas.id.toString(), gson.toJson(tapas, Tapas::class.java))
+                sharedPref.edit().apply {
+                    putString(tapas.id.toString(), gson.toJson(tapas, Tapas::class.java))
+                }
             }
-            sharedPref.edit().apply()
             listTapas.right()
         }catch (ex: Exception){
             ErrorApp.DataError.left()

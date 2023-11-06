@@ -13,7 +13,7 @@ class ApiTapasRemoteSource {
                 "Casa de Pèpe",
                 "6",
                 "8.0",
-                "https://scontent.fmad5-1.fna.fbcdn.net/v/t39.30808-6/356045542_781267970071828_8583688896678884086_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=c-yidyEapDwAX8dC9ut&_nc_ht=scontent.fmad5-1.fna&oh=00_AfAU7HD55_pRaxTudb8YJxAIAbqrHnmmWZ9POKLFyWkETw&oe=6536AFE9"
+                "https://chankete.com/wp-content/uploads/2022/01/Plato-de-degustacio%CC%81n-de-tapas.jpeg"
             )
         )
     }
